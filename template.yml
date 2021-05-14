@@ -5,8 +5,8 @@ Resources:
             GroupDescription: Enable SSH access via port 22
             SecurityGroupIngress:
                 - IpProtocol: tcp
-                  FromPort: '22'
-                  ToPort: '22'
+                  FromPort: 22
+                  ToPort: 22
                   CidrIp: 0.0.0.0/0
 
     Ec2Instance:
@@ -16,6 +16,3 @@ Resources:
               - !Ref InstanceSecurityGroup
             KeyName: ansible-new
             ImageId: ami-09e67e426f25ce0d7
-            Tags:
-                - Key: Name 
-                  Value: Instance

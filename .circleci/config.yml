@@ -7,7 +7,8 @@ jobs:
             - checkout
             - run:
                 name: Deploy Infrastructure 
-                command: aws cloudformation deploy --template-file template.yml --stack-name my-stack --region=us-east-1
+                command: |
+                    aws cloudformation deploy --template-file template.yml --stack-name my-stack 
                 
 workflows:
     my_workflow:
